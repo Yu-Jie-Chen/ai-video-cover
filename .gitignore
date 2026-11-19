@@ -1,0 +1,15 @@
+# Personal input and generated deliverables
+inputs/
+outputs/
+output/
+generated/
+private/
+
+# Local environment and tooling
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI video cover"
+  short_description: "根据口播稿、人物照片与风格参考，制作贴合内容的视频封面和标题"
+  default_prompt: "请使用 $ai-video-cover，根据我的口播稿、人物照片和参考封面，生成吸引人且不偏离内容的标题、封面及可复用提示词。"
