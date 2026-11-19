@@ -8,9 +8,11 @@ A reusable Codex skill for script-grounded video covers and image-generation pro
 
 - 提炼发布标题与封面短标题，兼顾吸引力和内容一致性。
 - 分清人物身份参考与视觉风格参考，保留人物特征，避免带入旧封面文案。
+- 延续同系列的配色与版式，每期使用本轮人像和内容；本次指定的新比例、风格优先。
 - 支持教育、知识分享、产品讲解等主题，按参考风格与横竖比例调整。
 - 支持“直接生成封面”和“只写提示词”。
 - 输出完整提示词，便于在其他图片生成工具中复用。
+- 统一定稿文字、上图文字与交付记录；生成后读取实际尺寸，区分目标比例和实测结果。
 
 本项目制作的是视频的静态封面，不生成动态视频。
 
@@ -34,6 +36,16 @@ git clone https://github.com/Yu-Jie-Chen/ai-video-cover.git ~/.codex/skills/ai-v
 标题要吸引人，但必须与正文相关。
 ```
 
+连续制作同系列：
+
+```text
+请使用 $ai-video-cover，沿用上次黄白大字、人物特写和底部白条的风格。
+这次用新上传的照片作为人物参考，旧封面只参考风格。
+根据本轮口播重新选标题和背景，画面改成9:16。
+```
+
+可复用的 [真人口播系列预设](references/portrait-series.md) 提供版式起点。它不会覆盖本次指定的风格或尺寸，也不要求所有主题都用黄白配色。
+
 只要提示词：
 
 ```text
@@ -52,6 +64,7 @@ git clone https://github.com/Yu-Jie-Chen/ai-video-cover.git ~/.codex/skills/ai-v
 | [agents/openai.yaml](agents/openai.yaml) | Codex 显示名称和默认调用指令 |
 | [references/universal-prompt.md](references/universal-prompt.md) | 可复制到 AI 助手的完整通用指令 |
 | [references/cover-prompt-template.md](references/cover-prompt-template.md) | 发给图片生成工具的结构化模板 |
+| [references/portrait-series.md](references/portrait-series.md) | 黄白大字真人口播系列的可选样式与换比例规则 |
 
 ## 工具与数据
 
