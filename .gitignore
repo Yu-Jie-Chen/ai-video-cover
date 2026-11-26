@@ -13,3 +13,11 @@ __pycache__/
 *.pyc
 .DS_Store
 Thumbs.db
+
+# Local video inputs, conversion outputs and runtime binaries
+*.qt
+*.mov
+*.mp4
+*.mkv
+ffmpeg*.exe
+无损转MP4-校验报告-*.json

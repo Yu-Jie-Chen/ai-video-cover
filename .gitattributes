@@ -1,0 +1,2 @@
+# Preserve CRLF in the Git blob too, including raw downloads and ZIP archives.
+*.cmd -text whitespace=cr-at-eol

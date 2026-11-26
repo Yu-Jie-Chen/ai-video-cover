@@ -1,11 +1,17 @@
 ---
 name: ai-video-cover
-description: Use when a user requests AI 视频封面、口播封面、缩略图、封面标题或通用封面生图提示词, especially from a script, a portrait photo, or a style reference. Covers static video-cover images; excludes video generation and full script rewriting.
+description: Use when a user requests AI 视频封面、口播封面、缩略图、封面标题或通用封面生图提示词, especially from a script, a portrait photo, or a style reference; also when explicitly requesting existing .qt/.mov videos be losslessly remuxed to MP4. Excludes video generation and full script rewriting.
 ---
 
 # AI video cover
 
 把视频内容变成有吸引力、兑现内容承诺的静态封面。标题负责引起兴趣，画面负责说明主题；封面提出的问题必须能由正文回应。
+
+## 视频无损转 MP4 配套工具
+
+用户明确要求转换现有视频格式时，读取 [references/lossless-mp4.md](references/lossless-mp4.md)，运行 `python scripts/lossless_to_mp4.py "视频文件夹"`。Windows 用户可将 Python 脚本与 `scripts/无损转换为MP4.cmd` 一起放进视频文件夹后双击启动。
+
+只做流复制，不重新编码；保留原片、不覆盖同名 MP4，校验音视频流哈希、完整解码及原片完整性后再报告完成。不兼容 MP4 的输入报失败，不自动转有损编码。仅做封面时不运行转换工具。
 
 ## 先识别交付模式与素材角色
 
@@ -72,4 +78,4 @@ description: Use when a user requests AI 视频封面、口播封面、缩略图
 - 画面：用户本人为主角，漫画草稿与作业为背景线索。
 - 只借用参考封面的字体层级与配色，不带入其“错题整理”“高三复习”等旧内容。
 
-本技能只授权本次封面制作。发布视频、上传人物照片到代码仓库、创建远程项目等操作需由用户另行请求。
+本技能仅执行用户请求的封面制作或视频格式转换。发布视频、上传人物照片或视频到代码仓库、创建远程项目等操作需由用户另行请求。
